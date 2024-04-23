@@ -52,7 +52,7 @@ export default function QuizApp() {
     },
   ];
 
-  const handleOptionChange = (e) => {
+  const handleOptionChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setSelectedOption(e.target.value);
   };
 
