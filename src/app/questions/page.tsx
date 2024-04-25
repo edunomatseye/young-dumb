@@ -1,6 +1,9 @@
 "use client"
 
 import React, { useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+// importing the component from the library
+import { ProductList } from '@myreactapp/products';
 
 const style = {
   container: {
@@ -118,3 +121,15 @@ export default function QuizApp() {
   );
 }
 
+function Home() {
+  return <h1>Home</h1>;
+}
+
+export function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Home />}></Route>
+      <Route path="/products" element={<ProductList />}></Route>
+    </Routes>
+  );
+}
